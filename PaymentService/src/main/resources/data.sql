@@ -1,0 +1,1 @@
+insert into user (`username`,`number`) VALUES ('masoud', '09371009016')

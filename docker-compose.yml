@@ -1,0 +1,43 @@
+services:
+  rmq:
+    image: "rabbitmq:3-management"
+    container_name: rabbitmqcontainer
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+  db:
+    image: "mysql"
+    container_name: payment-mysql
+    restart: always
+    ports:
+      - '3306:3306'
+    environment:
+      - "MYSQL_ROOT_PASSWORD=123456"
+      - "MYSQL_USER=root"
+      - "MYSQL_PASSWORD="
+      - "MYSQL_DATABASE=paymentservice"
+    command: --init-file /data/application/init.sql
+    volumes:
+      - ./init.sql:/data/application/init.sql
+  phpmyadmin:
+    depends_on:
+       - db
+    image: "phpmyadmin/phpmyadmin"
+    container_name: phpmyadmin
+    restart: always
+    ports:
+       - '8080:80'
+    environment:
+      PMA_HOST: db
+  payment:
+    container_name: paymentservice
+    depends_on:
+      - db
+    build: ./PaymentService
+    ports:
+        - '8282:8282'
+  notification:
+    depends_on:
+      - rmq
+    container_name: notificationservice
+    build: ./NotificationService

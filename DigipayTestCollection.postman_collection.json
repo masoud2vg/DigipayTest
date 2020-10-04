@@ -1,0 +1,184 @@
+{
+	"id": "17e7684e-abeb-7533-6cc7-2fe6cbe82879",
+	"name": "DigipayTestCollection",
+	"description": "",
+	"order": [
+		"5705b15f-325e-8fed-c0cb-2e2ff7c9ea90",
+		"97c0e534-31aa-b48f-01c0-3d1e53f12523",
+		"a5453892-d98d-b16c-07af-af01188f99ba",
+		"005a1c29-09dc-632d-c9ca-08641bed274e",
+		"16c30c17-7cc4-7ce8-6def-33507dbaa9eb"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1601828489609,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "005a1c29-09dc-632d-c9ca-08641bed274e",
+			"headers": "Content-Type: application/json\nuserid: 1\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "userid",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8282/transactions/transfer",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "17e7684e-abeb-7533-6cc7-2fe6cbe82879",
+			"data": [],
+			"dataMode": "raw",
+			"name": "localhost:8282/transactions/transfer",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1601828506221,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"source\" : \"6037-1010-8773-9221\", \n\t\"dest\" : \"6037-2910-8773-9221\",\n\t\"cvv2\"  : \"224\",\n\t\"expDate\" : \"9902\",\n\t\"pin\" : \"765876\",\n\t\"amount\" : 8000\n}"
+		},
+		{
+			"id": "16c30c17-7cc4-7ce8-6def-33507dbaa9eb",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8282/transactions",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "17e7684e-abeb-7533-6cc7-2fe6cbe82879",
+			"data": [],
+			"dataMode": "raw",
+			"name": "localhost:8282/transactions",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1601828536001,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"cardId\" : 1, \n\t\"startDate\" : 1601642738312,\n\t\"endDate\"  : 1611642738312\n}"
+		},
+		{
+			"id": "5705b15f-325e-8fed-c0cb-2e2ff7c9ea90",
+			"headers": "userid: 1\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "userid",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8282/cards",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "17e7684e-abeb-7533-6cc7-2fe6cbe82879",
+			"data": [],
+			"dataMode": "raw",
+			"name": "localhost:8282/cards",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1601828492525,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"id\": null,\n\t\"number\": \"6037-1010-8773-9221\",\n\t\"cvv2\":\"224\",\n\t\"expireDate\":\"9905\"\n}"
+		},
+		{
+			"id": "97c0e534-31aa-b48f-01c0-3d1e53f12523",
+			"headers": "userid: 1\n",
+			"headerData": [
+				{
+					"key": "userid",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8282/cards/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "17e7684e-abeb-7533-6cc7-2fe6cbe82879",
+			"data": null,
+			"dataMode": "params",
+			"name": "localhost:8282/cards/1",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1601828519762,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "a5453892-d98d-b16c-07af-af01188f99ba",
+			"headers": "userid: 1\n",
+			"headerData": [
+				{
+					"key": "userid",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8282/cards",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "17e7684e-abeb-7533-6cc7-2fe6cbe82879",
+			"data": null,
+			"dataMode": "params",
+			"name": "localhost:8282/cards",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1601828526610,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
